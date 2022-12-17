@@ -11,13 +11,15 @@ const AddPhoto = () => {
   const addPhoto = (e) => {
     e.preventDefault();
     // TODO: answer here
+    setError(false);
+    navigate("/");
   };
 
   return (
     <>
       <div className="container">
-      {error && <div className="error-msg">{error}</div>}
-        <form className="add-form"  onSubmit={addPhoto}>
+        {error && <div className="error-msg">{error}</div>}
+        <form className="add-form" onSubmit={addPhoto}>
           <label>
             Image Url:
             <input
@@ -48,7 +50,12 @@ const AddPhoto = () => {
               onChange={(e) => setSecret(e.target.value)}
             />
           </label>
-          <input className="submit-btn" type="submit" value="Submit" data-testid="submit" />
+          <input
+            className="submit-btn"
+            type="submit"
+            value="Submit"
+            data-testid="submit"
+          />
         </form>
       </div>
     </>

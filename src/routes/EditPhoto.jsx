@@ -13,6 +13,8 @@ const EditPhoto = () => {
   const editPhoto = (e) => {
     e.preventDefault();
     // TODO: answer here
+    setError(false);
+    navigate("/");
   };
 
   useEffect(() => {
@@ -50,7 +52,12 @@ const EditPhoto = () => {
                 onChange={(e) => setCaptions(e.target.value)}
               />
             </label>
-            <input className="submit-btn" type="submit" value="Submit" data-testid="submit" />
+            <input
+              className="submit-btn"
+              type="submit"
+              value="Submit"
+              data-testid="submit"
+            />
           </form>
         </div>
       )}

@@ -12,6 +12,7 @@ const Photos = () => {
 
   const deletePhoto = (id) => {
     // TODO: answer here
+    setError(false);
   };
 
   useEffect(() => {
@@ -22,9 +23,15 @@ const Photos = () => {
   useEffect(() => {
     setLoading(true);
     // TODO: answer here
+    setPhotos([]);
   }, []);
 
-  if (error) return <h1 style={{ width: "100%", textAlign: "center", marginTop: "20px" }} >Error!</h1>;
+  if (error)
+    return (
+      <h1 style={{ width: "100%", textAlign: "center", marginTop: "20px" }}>
+        Error!
+      </h1>
+    );
 
   return (
     <>
